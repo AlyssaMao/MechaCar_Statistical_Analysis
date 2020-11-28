@@ -5,7 +5,7 @@
 ### Purpose
 The purpose of this analysis is to help Louise gain an understanding of how different campaigns fared in relation to their launch dates and funding goals
 ## Linear Regression to Predict MPG
-![deliverable1.PNG]
+![](deliverable1.PNG)
 **Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?**
 Vehicle length and ground clearance
 
