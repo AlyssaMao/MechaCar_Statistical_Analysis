@@ -3,51 +3,43 @@
 ## Overview of Project
 
 ### Purpose
-The purpose of this analysis is to help Louise gain an understanding of how different campaigns fared in relation to their launch dates and funding goals
+
+The purpose of this analysis is to perform analytics over MechaCar production data and arrive at conclusions that may help the business.
+
 ## Linear Regression to Predict MPG
+
 ![](deliverable1.PNG)
+
 **Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?**
+
 Vehicle length and ground clearance
 
 **Is the slope of the linear model considered to be zero? Why or why not?**
+
 No. The p-value indicates statistical significance. 
 
 **Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?**
-Yes because there's a strong correlation for this linear model as the R-squared value depicts. 
 
-### Analysis of Outcomes Based on Launch Date
-![Outcomes Based on Launch Date](Resources/Theater_Outcomes_vs_Launch.png) 
->[Contributing Spreadsheet for this Analysis](Kickstarter_Challenge.xlsx.xlsx)
+Yes because there's a strong correlation for this linear model as the R-squared value depicts.
 
-I performed an analysis of theater outcomes based on their month of launch as depicted in the image above by creating a pivot chart (line graph) in Excel for the Parent Category "theater" and graphing the trend by months to see the number of successful, failed, and canceled theater campaigns in each given month. 
+## Summary Statistics on Suspension Coils
 
-### Analysis of Outcomes Based on Goals
-![Outcomes vs Goals](Resources/Outcomes_vs_Goals.png)
->[Contributing Spreadsheet for this Analysis](Kickstarter_Challenge.xlsx.xlsx)
+**The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?**
 
-I performed an analysis of plays outcomes based on dollar amount listed in each of the campaign goals. To do this, dollar amounts were grouped in buckets starting with "Less than 1000", "1000 to 4999", and so forth in $5000 increments all the way until "Greater than 50000". I then calculated the Percentage of successful, failed, and canceled campaigns in each bucket. The graphical depiction of the result can be seen above. 
+![](totalsummary.PNG)
 
-### Challenges and Difficulties Encountered
-One particular challenge that I faced was not during the analysis portion of this exercise, but instead in the GitHub section of this week's challenge. I had a lot of issues trying to upload links and images in the readme.md section of the deliverable for this week. Some of the things that I found helpful to overcome these challenges include the following: 
+Total summary indicates that the manufacturing lots in total does meet design specifications because it's symmetrically distributed with an acceptable variance and small SD
 
-1. [How to Upload Images in GitHub](https://www.youtube.com/watch?v=hHbWF1Bvgf4)
+![](lotsummary.PNG)
 
-2. [Basic GitHub Syntaxs](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#links)
+Lot summary indicates that Lots 1,2 meet the design specifications, but Lot 3 appears to have a much larger variance and high standard deviation 
 
-## Results
+## T-Tests on Suspension Coils 
+![](ttests.PNG)
 
-**What are two conclusions you can draw about the Outcomes based on Launch Date?**
+All of the T-tests, both all together, and for individual lots, indicate a P-value that is higher than 5%, signifying that it is not statistically significant and as such we cannot reject the null hypothesis 
 
-Two conclusions I can draw about the OUtcomes based on Launch Date is that, consistent with the rest of the data in the kickstarter file, success rate appears to peak for theater campaigns between the months of May and June and steadily declines thereafter, with the lowest performing month in December. Secondly, there does not appear to be a strong correlation between failed/canceled theater campaigns and the time of year these were launched. 
+## Study Design: MechaCar vs Competition
 
-**What can you conclude about the Outcomes based on Goals?**
+I'm not too familiar with cars to be honest, but horsepower seems to be an important aspect in deciding to purchase. A null hypothesis could be, horsepower of the car does not have an impact on how fast a car goes from O to 60 MPH. The Ha would be horsepower of the car does impact how fast a car gets from 0 to 60 MPH. This could be analyzed by looking at correlation and perhaps ANOVA. Testing for statistical significance can help consumers decide whether horsepower should be considered when they want to accelerate really fast on the road ( I assume it would be). In terms of data needed, obviously horsepower of the car and also data on how many seconds it takes for the car to go from 0 to 60. 
 
-Based on my analysis of the plays campaign outcomes based on goals, I noticed that none of the campaigns were canceled; they either succeeded to meet their targets or failed. Additionally, campaigns that were less than $1000 had the highest percentage of success, whereas campaigns greater than $45,000 and less than $49,999 had the highest percentage of failure. Based on this, we can say that, generally speaking, campaigns with lower dollar goals tend to be more successful than campaigns that were very expensive. 
-
-**What are some limitations of this dataset?**
-
-Some limitations of this dataset is that it only looks at a sample of kickstarter campaigns and it may not be representative of the population data. Additionally, the data is skewed to the right with several outliers beyond the normal standard deviation. We do not know what is causing this to happen as we do not know how this data was collected and/or whether there are inherent biases. 
-
-**What are some other possible tables and/or graphs that we could create?**
-
-Other possible tables/graphs we could've looked at is we could have evaluated the data for outliers using the box and whiskers graph. Additionally, we can further evaluate the data based on launch date and goals for specific countries and whether or not the campaign was staff picked. Additionally, instead of launch date, we could have looked at the length of the campaign, and the end date as well. 
